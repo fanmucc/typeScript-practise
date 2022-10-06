@@ -60,3 +60,29 @@ type Coord3X = Pick<Coord, 'x'>;
 type Coord3Xs = {
     x: number;
 }
+// 手动实现 Pick
+type MyPick<T, K extends keyof T> = {
+    [key in K]: T[key]
+}
+
+// 手动实现 Record
+type MyRecord<K extends keyof any, T> = {
+    [key in K]: T
+}
+
+// 手动显示 Readonly
+type MyReadonly<T> = {
+    readonly [key in keyof T]: T[key]
+}
+type Reads = {
+    x: number;
+    y: number;
+}
+
+type NewReads = MyReadonly<Reads>
+// let objs: NewReads = {
+//     x: 123,
+//     y: 456
+// }
+// objs.x = 789
+
