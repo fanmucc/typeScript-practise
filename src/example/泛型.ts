@@ -75,6 +75,9 @@ function identity1<T>(arg: T): T {
 }
 
 // let myIdentity: <T>(arg: T) => T = identity1;
+// 对象字面量的形势
 let myIdentity: {<T>(arg: T): T} = identity
-console.log(myIdentity<numebr>(1))
+console.log(myIdentity<number>(1))
+
+
 

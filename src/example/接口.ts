@@ -45,7 +45,8 @@ const vegetableInfo = {
     firstName: '前',
     lastName: '后',
     age: 20,
-    a: '多余属性'
+    a: '多余属性',
+    c: 123
 }
 getFullName(vegetableInfo)
 // 只读属性
